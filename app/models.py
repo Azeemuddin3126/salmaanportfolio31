@@ -13,7 +13,7 @@ from django.db import models
 # Create your models here.
 
 class main(models.Model):
-    img1 = models.ImageField(upload_to='image/', null=True, blank=True)
+    img1 = models.ImageField(upload_to='img/', null=True, blank=True)
     heading = models.CharField(max_length=225,blank=True)
     subhead = models.TextField(max_length=500, null=True, blank=True)
     
@@ -92,7 +92,7 @@ class resume(models.Model):
 
 
 class projects(models.Model):
-    img2 = models.ImageField()
+    img2 = models.ImageField(upload_to='img/',)
     projtitle = models.CharField(max_length=223)
     descrip = models.TextField(max_length=2224)
     projlink = models.URLField()
