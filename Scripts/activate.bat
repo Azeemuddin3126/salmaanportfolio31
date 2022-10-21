@@ -1,4 +1,4 @@
-@set "VIRTUAL_ENV=C:\Users\murali\OneDrive\Desktop\Main"
+@set "VIRTUAL_ENV=C:\Users\murali\OneDrive\Desktop\salmaanportfolio31"
 
 @if defined _OLD_VIRTUAL_PROMPT (
     @set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
