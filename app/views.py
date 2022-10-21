@@ -34,7 +34,7 @@ def home(request):
     exp = experience.objects.all()
     skilll = skill.objects.all()
     res = resume.objects.all()
-    proj = projects.objects.order_by('-id').all()
+    proj = projects.objects.order_by('-id')
     sl = social.objects.all()
     cs = certificate.objects.all()
     ah = achievements.objects.all()
