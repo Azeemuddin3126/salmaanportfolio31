@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2&!*^y25rz#+ga=(m3#s9b7(mtg_u=yp6qc#0z$)xof(5b6b+3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 
@@ -60,7 +61,6 @@ MIDDLEWARE = [
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-MEDIAFILES_STORAGE = 'whitenoise.storage.CompressedMediaFilesStorage'
 
 
 
@@ -88,11 +88,22 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'd8d7atnl245oav',
+            'USER': 'httgoxywldrksi',
+            'PASSWORD': 'f2e48336b208742543e4faae7328366fb9bd7acc61e1c0736fa79855ff64e70e',
+            'HOST': 'ec2-54-173-237-110.compute-1.amazonaws.com',
+            'PORT': '5432',
+        }
 }
 
 
@@ -130,22 +141,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
+
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
-
-
-
+STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+django_heroku.settings(locals())
 
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dhbzkbgo0',
-    'API_KEY': '638556847997519',
-    'API_SECRET': 'd_dHI80yqOMgRnuKvLWQUgrh8xw'
-}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
