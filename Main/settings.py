@@ -32,6 +32,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['salmaan3105.herokuapp.com','127.0.0.1']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,11 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'app',
     'django_bootstrap_icons',
     'cloudinary_storage',
-    'cloudinary',
 ]
 
 MIDDLEWARE = [
