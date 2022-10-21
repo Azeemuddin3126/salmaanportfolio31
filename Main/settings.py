@@ -42,12 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
     'app',
     'django_bootstrap_icons',
-    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +60,9 @@ MIDDLEWARE = [
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+MEDIAFILES_STORAGE = 'whitenoise.storage.CompressedMediaFilesStorage'
+
+
 
 ROOT_URLCONF = 'Main.urls'
 
