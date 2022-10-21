@@ -6,9 +6,11 @@ from importlib.metadata import requires
 from lzma import MODE_FAST
 from pickle import NONE
 from pyexpat import model
+from sqlite3 import Date
 from typing_extensions import Required
 from unittest.util import _MAX_LENGTH
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -94,6 +96,7 @@ class resume(models.Model):
 class projects(models.Model):
     img2 = models.ImageField(upload_to='image/',)
     projtitle = models.CharField(max_length=223)
+    date = models.DateField(default=timezone.now)
     descrip = models.TextField(max_length=2224)
     projlink = models.URLField()
     
