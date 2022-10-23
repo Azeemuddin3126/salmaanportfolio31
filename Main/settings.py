@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+import cloudinary_storage
+import dj_database_url
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,7 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'app',
     'django_bootstrap_icons',
 ]
@@ -87,10 +92,21 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'daqq42dvg8saql',
+        'USER': 'ekwvwjdbyqfbtq',
+        'PASSWORD': '57e02242d97396003a759aad1baf68e17adf51b300df438549cf4f9a83463d24',
+        'HOST': 'ec2-52-70-45-163.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -152,3 +168,12 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = ' salmaanshaik642@gmail.com'
 EMAIL_HOST_PASSWORD = 'hbidnhlzkvooivcw'
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dhbzkbgo0',
+    'API_KEY': '638556847997519',
+    'API_SECRET': 'd_dHI80yqOMgRnuKvLWQUgrh8xw'
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
