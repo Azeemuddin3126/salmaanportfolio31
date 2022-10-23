@@ -153,6 +153,8 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIAFILESTORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 
 # Default primary key field type
@@ -175,5 +177,4 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '638556847997519',
     'API_SECRET': 'd_dHI80yqOMgRnuKvLWQUgrh8xw'
 }
-MEDIAFILESTORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
