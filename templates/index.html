@@ -128,10 +128,7 @@
         <!-- Masthead Subheading-->
         {% for i in home %}
         <p class="masthead-subheading font-weight-light mb-0">
-          Data  Scientist  Aspirant | Python  Freak | Freelancer<br>
-                       Django/Flask  Web Developer <br>
-                Give  Me  A  Data , I  Will  Tell  You  The  Story
-          {{i.subhead}}
+          {{i.subhead|linebreaks}}
         </p>
         {% endfor %}
          
