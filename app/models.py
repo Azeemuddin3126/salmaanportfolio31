@@ -79,7 +79,7 @@ class hobbies(models.Model):
 
 
 class skill(models.Model):
-    skills = models.CharField(max_length=222)
+    skills = models.TextField(max_length=222)
     def __main__(self):
         return self.skills
     

@@ -111,7 +111,7 @@
           src="{{i.img1.url}}"
         />
         <!-- Masthead Heading-->
-        <h1 class="masthead-heading text-uppercase mb-0" style='color:skyblue'>
+        <h1 class="masthead-heading" style='color:skyblue'>
           {{i.heading}}   
         </h1>
           
@@ -127,9 +127,9 @@
 
         <!-- Masthead Subheading-->
         {% for i in home %}
-        <p class="masthead-subheading font-weight-light mb-0">
-          {{i.subhead|linebreaks}}
-        </p>
+        <h3 class="masthead-subheading fw-light mb-0" >
+           {{i.subhead|linebreaks}}
+        </h3>
         {% endfor %}
          
         <!-- Footer Social Icons-->
@@ -180,6 +180,30 @@
           </div>
           <!-- About Section Content-->
           <div class="row">
+            <div class="col-lg-4 fw-light me-auto">
+              <p class="lead  text-white mb-0">
+                <h1>⚒️Experience </h1>
+                       <br>
+                {% for i in exp %}
+                <h5 style = 'color:MediumSeaGreen;'>💻{{i.role}}</h5>
+                    <h6 style = 'color:DarkOrange;'>{{i.company}}</h6>
+                    <h6 style = 'color:DarkOrange;'>{{i.duration}}</h6>
+                    {{i.disc|linebreaks}}
+                {% endfor %}                  
+              </p>
+            </div>
+
+            <div class="col-lg-4 fw-bolder me-auto">
+              <p class="lead  text-white mb-0">
+                <h1>👨‍💻Skills</h1>
+                <br>
+                {% for i in skilll %}
+                <h6 style='color:skyblue'> {{i.skills|linebreaks}}</h6>
+                {% endfor %}
+              </p>
+            </div>
+
+
             <div class="col-lg-4 fw-bolder me-auto">
               <p  class="lead  text-white mb-0" >
                 <h1>🧑‍🎓Eduction </h1>
@@ -195,31 +219,7 @@
               </p>
             </div>
 
-            <div class="col-lg-4 fw-bolder me-auto">
-              <p class="lead  text-white mb-0">
-                <h1>⚒️Experience </h1>
-                       <br>
-                {% for i in exp %}
-                <h5 style = 'color:MediumSeaGreen;'>💻{{i.role}}</h5>
-                    {{i.company}}<br>
-                    {{i.duration}}<br>
-                    {{i.disc}}<br>
-                    <br>
-                {% endfor %}                  
-              </p>
-            </div>
-
-            <div class="col-lg-4 fw-bolder me-auto">
-              <p class="lead  text-white mb-0">
-                <h1>👨‍💻Skills</h1>
-                <br>
-                {% for i in skilll %}
-                <h6 style='color:skyblue'> {{i.skills}}</h6>
-                {% endfor %}
-              </p>
-            </div>
-
-            <div class="col-lg-4 fw-bolder me-auto">
+            <div class="col-lg-4 fw-light me-auto">
               <p class="lead  text-white mb-0">
                 <h1>📜Certifications</h1>
                 <br>
@@ -231,7 +231,7 @@
                 <a href ='{{i.curl}}'>
                   Certificate Link</a><br>
                 <br>
-                {{i.descr}}<br>
+                {{i.descr|linebreaks}}<br>
                 <br>
                 {% endfor %}
               </p>
@@ -243,7 +243,7 @@
                 <h1>✨Achievements</h1>
                 <br>
                 {% for i in ah %}
-                <h6 style='color:skyblue'> {{i.aname|linebreaks}}</h6>
+                <h5 style='color:skyblue'> {{i.aname|linebreaks}}</h5>
                 {% endfor %}
               </p>
             </div>
