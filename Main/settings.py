@@ -14,7 +14,6 @@ import os
 from pathlib import Path
 import cloudinary_storage
 import dj_database_url
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,12 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2&!*^y25rz#+ga=(m3#s9b7(mtg_u=yp6qc#0z$)xof(5b6b+3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 
 
-ALLOWED_HOSTS = ['salmaan3105.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 
@@ -92,23 +91,23 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'salmaanp',
-        'USER': 'root',
-        'PASSWORD': 'salmaan@224',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'salmaanp',
+#         'USER': 'root',
+#         'PASSWORD': 'salmaan@224',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
