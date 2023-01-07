@@ -102,7 +102,7 @@ DATABASES = {
         'NAME': 'portsal',
         'USER': 'root',
         'PASSWORD': 'Salmaan@224',
-        'HOST': '127.0.0.1',
+        'HOST': '0.0.0.0:10000',
         'PORT': 3306,
     }
 }
