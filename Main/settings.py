@@ -102,7 +102,7 @@ DATABASES = {
         'NAME': 'portsal',
         'USER': 'root',
         'PASSWORD': 'Salmaan@224',
-        'HOST': 'https://azeemuddinportfolio.onrender.com/',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
