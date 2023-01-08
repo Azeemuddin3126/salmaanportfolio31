@@ -101,9 +101,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'portsal',
         'USER': 'root',
-        'PASSWORD': 'Salmaan@224',
-        'HOST': '0.0.0.0:10000',
-        'PORT': 3306,
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': 3307,
     }
 }
 
