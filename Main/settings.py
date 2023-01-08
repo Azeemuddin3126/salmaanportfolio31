@@ -102,12 +102,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'portsal',
         'USER': 'root',
-        'PASSWORD': 'Salmaan@224',
-        'HOST': 'localhost',
-        'PORT': 3306,
-         'OPTIONS': {
-            'read_default_file': '/opt/lampp/etc/my.cnf',
-         }
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': 3307,
     }
 }
 
