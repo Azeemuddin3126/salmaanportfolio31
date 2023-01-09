@@ -104,9 +104,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': 3307,
-        'socket':'C:/xampp/mysql/mysql.sock',
-
+        'PORT': '3307',
     }
 }
 
