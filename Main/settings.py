@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary_storage',
-    'cloudinary',
     'app',
     'django_bootstrap_icons',
 ]
@@ -107,6 +105,7 @@ DATABASES = {
         'PORT': '3307',
     }
 }
+
 
 
 # Password validation
