@@ -100,11 +100,11 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',
+        'NAME': 'test',
         'USER': 'root',
-        'PASSWORD': 'MzgMGFdDqJRSfqcKu6K9',
-        'HOST': 'containers-us-west-18.railway.app',
-        'PORT': '6067',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3307',
     }
 }
 
