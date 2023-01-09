@@ -3,6 +3,7 @@ certifi==2022.12.7
 charset-normalizer==2.1.1
 Django
 django-bootstrap-icons==0.8.2
+gunicorn==20.1.0
 idna==3.4
 mysqlclient==2.1.1
 Pillow==9.4.0
