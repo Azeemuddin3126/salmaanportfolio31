@@ -93,6 +93,9 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
+
 #mysql -h 127.0.0.1 -P 3307 -u root -p portsal
 
 DATABASES = {
@@ -101,8 +104,6 @@ DATABASES = {
         'NAME': 'salmaan',
         'USER': 'salmaan',
         'PASSWORD': 1234,
-        'HOST': 'localhost',
-        'PORT': 5432,
     }
 }
 
