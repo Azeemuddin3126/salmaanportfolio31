@@ -96,17 +96,6 @@ DATABASES = {
 
 
 
-#mysql -h 127.0.0.1 -P 3307 -u root -p portsal
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'salmaan',
-#         'USER': 'salmaan',
-#         'PASSWORD': 1234,
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -145,12 +134,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
-
-
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
 
 
 
@@ -168,10 +157,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = ' salmaanshaik642@gmail.com'
 EMAIL_HOST_PASSWORD = 'hbidnhlzkvooivcw'
 
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dhbzkbgo0',
-    'API_KEY': '638556847997519',
-    'API_SECRET': 'd_dHI80yqOMgRnuKvLWQUgrh8xw'
-}
 
