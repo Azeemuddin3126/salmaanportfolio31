@@ -43,7 +43,7 @@ def generate_random_commits(num_commits, repo_path):
     print(f"{num_commits} random commits created.")
 
 # Configuration
-repository_path = r'C:\Users\azeem\Desktop\GitTrick\gittrick'  # Replace with your local repo path
+repository_path = input(r'enter repo url:')  # Replace with your local repo path
 number_of_commits = int(input('Enter number of commits'))  # Adjust the number of commits you want
 
 # Run the script
