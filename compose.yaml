@@ -11,7 +11,6 @@ services:
   server:
     build:
       context: .
-    image: salmaan21/portfolio:latest
     ports:
       - 8000:8000
 
